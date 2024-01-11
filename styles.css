@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'MinecraftRus'; /* Название вашего шрифта */
+    src: url('res/fonts/Minecraft.otf') format('opentype'); /* Путь к файлу шрифта OTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'MinecraftRus', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: url('res/img/grass_texture2.png') repeat;
+    background-size: contain;
+    background-position: center bottom;
+    color: #fff;
+    text-align: left;
+    padding: 1em 20px;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+}
+
+.alertButtonSidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Размер кнопки по ширине */
+    height: 33px; /* Размер кнопки по высоте */
+    margin-bottom: 10px;
+    background: url('res/img/AlertBtn.png') repeat; /* Замените 'путь_к_вашей_текстуре_кнопки.png' на реальный путь к вашей текстуре кнопки */
+    background-size: cover; /* Трансформация текстуры под размеры кнопки */
+    color: #fff;
+    text-decoration: none;
+    line-height: 33px; /* Выравнивание текста по вертикали внутри кнопки */
+    text-align: center;
+    font-size: 13px;
+    margin: 0 auto 10px;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh; /* Заменил height на min-height */
+
+}
+
+.left-sidebar, .right-sidebar {
+    flex: 1;
+}
+
+.left-sidebar {
+    background: url('res/img/sidebar.png') repeat; /* Замените на путь к вашей текстуре для вторичных контейнеров */
+    background-size: 20%; /* Изменение размеров текстуры вторичных контейнеров */
+    padding: 20px;
+}
+
+.left-sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Размер кнопки по ширине */
+    height: 33px; /* Размер кнопки по высоте */
+    margin-bottom: 10px;
+
+    background-size: cover; /* Трансформация текстуры под размеры кнопки */
+    color: #fff;
+    text-decoration: none;
+    line-height: 33px; /* Выравнивание текста по вертикали внутри кнопки */
+    text-align: center;
+    font-size: 12px;
+    margin: 0 auto 10px;
+}
+
+.left-sidebar-btn {
+    background: url('res/img/knopka.png') repeat; /* Замените 'путь_к_вашей_текстуре_кнопки.png' на реальный путь к вашей текстуре кнопки */
+}
+@media only screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-sidebar, .right-sidebar, .main-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left-sidebar a, .right-sidebar-ds a, .right-sidebar-vk a, .right-sidebar-yt a {
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+        padding: 10px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .about-us, .developer-info {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .button-r-sidebar a {
+        display: none;
+    }
+
+    .button-r-sidebar {
+        display: none;
+    }
+
+    .display800 a {
+        display: none;
+    }
+
+    .display800 {
+        display: none;
+    }
+
+}
+@media (min-width: 800px) {
+
+.right-sidebar-ds a {
+    display: block;
+    width: 150px; /* Размер кнопки по ширине */
+    height: 40px; /* Размер кнопки по высоте */
+    margin-bottom: 10px;
+    background: url('res/img/knopkads.png') repeat; /* Замените 'путь_к_вашей_текстуре_кнопки.png' на реальный путь к вашей текстуре кнопки */
+    background-size: cover; /* Трансформация текстуры под размеры кнопки */
+    color: #fff;
+    text-decoration: none;
+    line-height: 35px; /* Выравнивание текста по вертикали внутри кнопки */
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.right-sidebar-vk a {
+    display: block;
+    width: 150px; /* Размер кнопки по ширине */
+    height: 40px; /* Размер кнопки по высоте */
+    margin-bottom: 10px;
+    background: url('res/img/knopkavk.png') repeat; /* Замените 'путь_к_вашей_текстуре_кнопки.png' на реальный путь к вашей текстуре кнопки */
+    background-size: cover; /* Трансформация текстуры под размеры кнопки */
+    color: #fff;
+    text-decoration: none;
+    line-height: 35px; /* Выравнивание текста по вертикали внутри кнопки */
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.right-sidebar-yt a {
+    display: block;
+    width: 150px; /* Размер кнопки по ширине */
+    height: 40px; /* Размер кнопки по высоте */
+    margin-bottom: 10px;
+    background: url('res/img/knopkayt.png') repeat; /* Замените 'путь_к_вашей_текстуре_кнопки.png' на реальный путь к вашей текстуре кнопки */
+    background-size: cover; /* Трансформация текстуры под размеры кнопки */
+    color: #fff;
+    text-decoration: none;
+    line-height: 35px; /* Выравнивание текста по вертикали внутри кнопки */
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.right-sidebar-tt a {
+    display: block;
+    width: 150px; /* Размер кнопки по ширине */
+    height: 40px; /* Размер кнопки по высоте */
+    margin-bottom: 10px;
+    background: url('res/img/knopkatt.png') repeat; /* Замените 'путь_к_вашей_текстуре_кнопки.png' на реальный путь к вашей текстуре кнопки */
+    background-size: cover; /* Трансформация текстуры под размеры кнопки */
+    color: #fff;
+    text-decoration: none;
+    line-height: 35px; /* Выравнивание текста по вертикали внутри кнопки */
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.right-sidebar-tg a {
+    display: block;
+    width: 150px; /* Размер кнопки по ширине */
+    height: 40px; /* Размер кнопки по высоте */
+    margin-bottom: 10px;
+    background: url('res/img/knopkatg.png') repeat; /* Замените 'путь_к_вашей_текстуре_кнопки.png' на реальный путь к вашей текстуре кнопки */
+    background-size: cover; /* Трансформация текстуры под размеры кнопки */
+    color: #fff;
+    text-decoration: none;
+    line-height: 35px; /* Выравнивание текста по вертикали внутри кнопки */
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.pisya {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+
+.right-sidebar {
+    background: url('res/img/sidebar.png') repeat; /* Замените на путь к вашей текстуре для вторичных контейнеров */
+    background-size: 20%; /* Изменение размеров текстуры вторичных контейнеров */
+    padding: 20px;
+}
+}
+.main-content {
+    background: url('res/img/main.png') repeat; /* Замените на путь к вашей текстуре для главного контейнера */
+    background-size: 7%; /* Изменение размеров текстуры главного контейнера */
+    padding: 10px;
+    flex: 5;
+    text-align: center;
+}
+
+.back-content {
+    background: url('res/img/main.png') repeat; /* Замените на путь к вашей текстуре для главного контейнера */
+    background-size: 25%; /* Изменение размеров текстуры главного контейнера */
+    padding: 10px;
+    flex: 5;
+    text-align: center;
+
+}
+
+.main-content h1, .main-content p {
+    color: #fff; /* Сделан текст белым */
+}
+
+.footer {
+	font-family: Arial, sans-serif;
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    color: #fff;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+#launcherBtn {
+    /* Стили для основной части кнопки... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.under-development {
+    color: yellow;
+    font-size: 8px; /* Размер шрифта для маленьких букв */
+    margin-top: -20px;
+}
+
+.about-us {
+    flex: 1;
+    padding: 20px;
+    text-align: center; /* Выравнивание текста в блоке "О нас" */
+}
+
+.about-us h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* Цвет заголовка */
+}
+
+.about-us h3 {
+    color: #aaa; /* Цвет заголовка */
+}
+
+.about-us p {
+    color: #fff; /* Цвет текста */
+    font-size: 15px;
+}
+
+.developer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.developer-info {
+    flex: 1;
+}   
+
+.grid-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8vh;
+
+}
+
+.grid-card {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

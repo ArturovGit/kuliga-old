@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="res/img/logogo.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <title>Карта - Kuliga Old</title>
+</head>
+<body>
+    
+    <header style="background-image: url('res/img/grass_texture2.png'); background-repeat: repeat-x;">
+        <img src="res/img/logo.png" alt="Логотип">
+    </header>
+    
+    <div class="container">
+        <div class="sidebar left-sidebar">
+            <a href="index.html" class="left-sidebar-btn">Главная</a>
+            <a class="left-sidebar-btn" href="https://http.cat/404" id="launcherBtn" target="_blank">
+            Лаунчер
+            <span class="under-development" class="left-sidebar-btn">в разработке</span>
+            </a>
+            <a href="map.html" class="left-sidebar-btn">Карта</a>
+            <a href="about.html" class="left-sidebar-btn">О нас</a>
+            <a href="#" id="copyIPBtn" class="left-sidebar-btn">Скопировать IP</a>
+            <a href="help.html" class="alertButtonSidebar">Помогите серверу</a>
+        </div>
+        
+        <div class="main-content">
+            <p>Карта</p>
+            <div class="main-content">
+                <iframe src="http://kuliga.fun:8080/" frameborder="0" style="width: 95%; height: 515px;"></iframe>
+            </div>
+        </div>
+        
+        <div class="sidebar right-sidebar display800">
+            <div class="sidebar right-sidebar-ds">
+                <a href="https://discord.gg/SbbPX3aQtg" target="_blank">Discord</a>
+            </div>
+            <div class="sidebar right-sidebar-vk">
+                <a href="https://vk.com/kuliga_old" target="_blank">VK</a>
+            </div>
+            <div class="sidebar right-sidebar-yt">
+                <a href="https://www.youtube.com/channel/UCPMQbBBCyIjbAwVu8-CiiXw" target="_blank">YouTube</a>
+            </div>
+            <div class="sidebar right-sidebar-tt">
+                <a href="https://www.tiktok.com/@kuliga_old" target="_blank">TikTok</a>
+            <div class="sidebar right-sidebar-tg">
+                <a href="https://t.me/kuliga_old" target="_blank">Telegram</a>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p class="small-text">© 2023 Minecraft Kuliga. Семейство серверов Kuliga не относятся к Mojang Studios.</p>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var copyIPBtn = document.getElementById('copyIPBtn');
+
+            // Инициализируем Clipboard.js для кнопки
+            new ClipboardJS(copyIPBtn, {
+                text: function() {
+                    // Функция, возвращающая текст для копирования (ваш IP)
+                    return 'old.kuliga.fun';
+                }
+            }).on('success', function(e) {
+                // При успешном копировании меняем текст кнопки
+                copyIPBtn.textContent = 'IP скопирован!';
+                setTimeout(function() {
+                    // Через 3 секунды возвращаем первоначальный текст кнопки
+                    copyIPBtn.textContent = 'Скопировать IP';
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
